@@ -9,4 +9,4 @@ RUN cd && wget https://github.com/jacksonliam/mjpg-streamer/archive/master.zip &
 RUN apt-get install -y cmake
 RUN apt-get install -y g++
 RUN cd ~/mjpg-streamer-master/mjpg-streamer-experimental && make clean application input_uvc.so output_http.so
-CMD LD_LIBRARY_PATH=/root/mjpg-streamer-master/mjpg-streamer-experimental /root/mjpg-streamer-master/mjpg-streamer-experimental/mjpg_streamer -i "input_uvc.so -d /dev/video0" -o "output_http.so -w /root/mjpg-streamer-master/mjpg-streamer-experimental/www -p 8080"
+CMD LD_LIBRARY_PATH=/root/mjpg-streamer-master/mjpg-streamer-experimental /root/mjpg-streamer-master/mjpg-streamer-experimental/mjpg_streamer -i "input_uvc.so -d /dev/video0" -o "output_http.so -w /root/mjpg-streamer-master/mjpg-streamer-experimental/www -p 8080" -r "1920x1080" -f 30
