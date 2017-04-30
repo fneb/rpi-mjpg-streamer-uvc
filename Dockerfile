@@ -1,5 +1,5 @@
 FROM tukiyo3/rpi-ja
-MAINTAINER hammmm <ham.lua@gmail.com>
+MAINTAINER Fneb <bethany@bethanycorcoran.co.uk>
 RUN apt-get update
 RUN apt-get install -y apt-utils curl
 RUN apt-get install -y wget unzip
