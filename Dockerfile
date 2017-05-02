@@ -7,4 +7,4 @@ RUN cd ~ && git clone https://github.com/jacksonliam/mjpg-streamer
 RUN apt-get upgrade -y
 RUN cd ~/mjpg-streamer/mjpg-streamer-experimental && make && make install
 CMD LD_LIBRARY_PATH=/root/mjpg-streamer/mjpg-streamer-experimental 
-CMD /root/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -o "/root/mjpg-streamer/mjpg-streamer-experimental/output_http.so -w ./www" -i "/root/mjpg-streamer/mjpg-streamer-experimental/input_uvc.so -r 1920x1080 -f 30"
+CMD /root/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -o "/root/mjpg-streamer/mjpg-streamer-experimental/output_http.so -w /root/mjpg-streamer/mjpg-streamer-experimental/www" -i "/root/mjpg-streamer/mjpg-streamer-experimental/input_uvc.so -r 1920x1080 -f 30"
